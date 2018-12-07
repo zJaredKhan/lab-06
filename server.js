@@ -15,11 +15,17 @@ const app = express();
 
 app.use(cors());
 
-// Globals
+// Error handling
+function handleError(res) {
+  res.status(500).send('Sorry something went wrong!');
+}
 
 // Get location data
 app.get('/location', (req, res) => {
   const locationData = searchToLatLong(req.query.data || 'lynwood');
+  if (!locationData) {
+    handleError(res);
+  }
   res.send(locationData);
 });
 
@@ -39,6 +45,9 @@ function Location(query, location) {
 // Get weather data
 app.get('/weather', (req, res) => {
   const weatherData = getWeather(req.query.data);
+  if (!weatherData) {
+    handleError(res);
+  }
   res.send(weatherData);
 });
 
@@ -56,6 +65,11 @@ function Weather(weatherJson) {
     }
   });
 }
+
+// Bad path 
+app.get('/*', function(req, res) {
+  res.status(404).send('You are in the wrong place');
+});
 
 
 // Listen
