@@ -3,9 +3,9 @@
 
 ## Number and name of feature: #1 Obtain lat and long
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hour
 
-Start time: _____
+Start time: 1745
 
 Finish time: _____
 
