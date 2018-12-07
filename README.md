@@ -7,16 +7,16 @@ Estimate of time needed to complete: 1 hour
 
 Start time: 1745
 
-Finish time: _____
+Finish time: 2000
 
-Actual time needed to complete: _____
+Actual time needed to complete: 2 hours 15 minutes
 
 
 ## Number and name of feature: #2 Retrieve weather information
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hour
 
-Start time: _____
+Start time: 2000
 
 Finish time: _____
 
